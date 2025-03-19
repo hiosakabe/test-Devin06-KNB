@@ -37,7 +37,6 @@ def main():
     
     # 欠損値の確認
     print("特徴量の欠損値を確認しています...")
-    pd.set_option('display.max_columns', 50)
     for col in train_features_df.columns:
         null_count = len(train_features_df[train_features_df[col].isnull()])
         if null_count > 0:
