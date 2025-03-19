@@ -42,9 +42,15 @@ def main():
         if null_count > 0:
             print(f"{col}: {null_count}件の欠損値があります")
     
+    # 欠損値を含む行を削除（元のノートブックと同じ方針）
+    train_features_df = train_features_df.dropna(axis=0)
+    print(f"欠損値削除後のデータ数: {len(train_features_df)}")
+    
     # KFoldによる交差検証の設定
     print("モデルを学習しています...")
     kf = KFold(n_splits=5, shuffle=True, random_state=71)
+    # 欠損値削除後のデータに合わせてtarget_arrayを更新
+    target_series = target_series.loc[train_features_df.index]
     target_array = np.array(target_series)
     cv_indices = list(kf.split(train_features_df, target_array))
     
