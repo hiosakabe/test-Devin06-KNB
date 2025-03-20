@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "racing-data-analysis"
+version = "0.1.0"
+description = "Racing data analysis tools for statistical analysis and performance tracking"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12.8"
+pandas = "^2.2.0"
+scikit-learn = "^1.4.0"
+matplotlib = "^3.8.0"
+lightgbm = "^4.1.0"
+tqdm = "^4.66.0"
+jupyter = "^1.0.0"
+seaborn = "^0.13.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
