@@ -20,12 +20,12 @@ This repository contains a comprehensive collection of racing data spanning from
 
 2. Set up Python environment with pyenv:
    ```bash
-   # Install Python 3.12.0 if not already installed
-   pyenv install 3.12.0
+   # Install Python 3.12.8 if not already installed
+   pyenv install 3.12.8
    
    # The .python-version file will automatically set the Python version
    # Verify with:
-   python --version  # Should show Python 3.12.0
+   python --version  # Should show Python 3.12.8
    ```
 
 3. Install dependencies with Poetry:

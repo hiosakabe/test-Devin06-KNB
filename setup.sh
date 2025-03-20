@@ -17,14 +17,14 @@ if ! command -v poetry &> /dev/null; then
 fi
 
 # Install Python version if not already installed
-if ! pyenv versions | grep -q 3.12.0; then
-    echo "Installing Python 3.12.0..."
-    pyenv install 3.12.0
+if ! pyenv versions | grep -q 3.12.8; then
+    echo "Installing Python 3.12.8..."
+    pyenv install 3.12.8
 fi
 
 # Set local Python version
-echo "Setting local Python version to 3.12.0..."
-pyenv local 3.12.0
+echo "Setting local Python version to 3.12.8..."
+pyenv local 3.12.8
 
 # Install dependencies with Poetry
 echo "Installing dependencies with Poetry..."
