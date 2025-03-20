@@ -19,11 +19,11 @@ def load_race_data(data_dir=None):
         # リポジトリのルートディレクトリからの相対パス
         data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
     
-    data1 = pd.read_csv(f"{data_dir}/1986-1992_race_result.csv")
-    data2 = pd.read_csv(f"{data_dir}/1993-1999_race_result.csv")
-    data3 = pd.read_csv(f"{data_dir}/2000-2005_race_result.csv")
-    data4 = pd.read_csv(f"{data_dir}/2006-2009_race_result.csv")
-    data5 = pd.read_csv(f"{data_dir}/2010-2013_race_result.csv")
+    data1 = pd.read_csv(f"{data_dir}/1986-1992_race_result.csv", low_memory=False)
+    data2 = pd.read_csv(f"{data_dir}/1993-1999_race_result.csv", low_memory=False)
+    data3 = pd.read_csv(f"{data_dir}/2000-2005_race_result.csv", low_memory=False)
+    data4 = pd.read_csv(f"{data_dir}/2006-2009_race_result.csv", low_memory=False)
+    data5 = pd.read_csv(f"{data_dir}/2010-2013_race_result.csv", low_memory=False)
     
     combined_data = pd.concat([data1, data2, data3, data4, data5])
     
